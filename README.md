@@ -1,24 +1,12 @@
 # README
+- describe: テストのまとまり
+- it: テストコードのまとまり
+- expect(X).to eq Y
+- eq, include() などのマッチャを使う
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### テストの原則
+1. 各exampleで期待する値は1つ
+1. 期待する結果をはっきりわかりやすく記述
+1. 起きて欲しいことと起きてほしくないこと両方をテストする
+1. 境界値をテストする
+1. 可読性を考えつつ、適度にDRYにする

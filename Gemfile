@@ -68,3 +68,7 @@ gem 'hirb'
 gem 'hirb-unicode'
 gem 'kaminari' # ページネーション
 gem 'devise' # ログイン機能
+
+# for RSpec
+gem 'rspec-rails'
+gem 'rails-controller-testing'

@@ -1,10 +1,9 @@
 class TweetsController < ApplicationController
 
-  before_action :move_to_index, except: [ :index, :show ]     # indexアクション以外が実行される前にhogeが実行される。
+  # before_action :move_to_index, except: [ :index, :show ]     # indexアクション以外が実行される前にhogeが実行される。
 
   def index
-    @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(5)
-    @tweets = Tweet.all.order('id DESC').page(params[:page]).per(5)
+    @tweets = Tweet.includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
 
   def new

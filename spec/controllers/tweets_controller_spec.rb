@@ -34,10 +34,12 @@ describe TweetsController do
       create(:user)
       tweets = create_list(:tweet, 3)
       get :index
-      expect(assigns(:tweets)).to match(tweets)
+      expect(assigns(:tweets)).to match(tweets.sort{ |a, b| b.created_at <=> a.created_at } )
     end
 
     it "renders the :index template" do
+      get :index
+      expect(response).to render_template :index
     end
   end
 

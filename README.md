@@ -1,5 +1,8 @@
 # README
-
+- describe: テストのまとまり
+- it: テストコードのまとまり
+- expect(X).to eq Y
+- eq, include() などのマッチャを使う
 
 ### テストの原則
 1. 各exampleで期待する値は1つ

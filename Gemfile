@@ -74,3 +74,7 @@ gem 'devise' # ログイン機能
 gem 'rspec-rails'
 gem 'rails-controller-testing'
 gem 'factory_bot_rails'
+
+group :production do
+  gem 'rails_12factor'
+end
